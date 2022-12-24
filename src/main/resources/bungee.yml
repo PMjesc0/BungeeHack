@@ -1,0 +1,4 @@
+name: BungeeHack
+version: '${project.version}'
+main: de.simon.bungeehack.BungeeHack
+description: Adds a setUUID-Commands which changes the UUID of a player to hack bungeecord servers
