@@ -1,5 +1,8 @@
 package de.simon.bungeehack;
 
+import de.simon.bungeehack.command.addServerCommand;
+import de.simon.bungeehack.command.getUUIDCommand;
+import de.simon.bungeehack.command.setUUIDCommand;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.plugin.Plugin;
 
@@ -7,8 +10,9 @@ public final class BungeeHack extends Plugin {
 
     @Override
     public void onEnable() {
-        ProxyServer.getInstance().getPluginManager().registerCommand(this, new setUUIDCommand("setuuid"));
+        ProxyServer.getInstance().getPluginManager().registerCommand(this, new addServerCommand("addserver"));
         ProxyServer.getInstance().getPluginManager().registerCommand(this, new getUUIDCommand("getuuid"));
+        ProxyServer.getInstance().getPluginManager().registerCommand(this, new setUUIDCommand("setuuid"));
     }
 
     @Override

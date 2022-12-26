@@ -1,5 +1,6 @@
-package de.simon.bungeehack;
+package de.simon.bungeehack.command;
 
+import de.simon.bungeehack.util.Data;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.connection.PendingConnection;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
@@ -19,7 +20,7 @@ public class setUUIDCommand extends Command {
     @Override
     public void execute(CommandSender sender, String[] args) {
         if (!(sender instanceof ProxiedPlayer)) {
-            sender.sendMessage("§cDu kannst den Befehl nur Ingame verwenden!");
+            sender.sendMessage(Data.ONLY_INGAME);
             return;
         }
         ProxiedPlayer player = (ProxiedPlayer) sender;
@@ -46,10 +47,10 @@ public class setUUIDCommand extends Command {
                 e.printStackTrace();
             }
 
-            player.sendMessage("§4Bungee§cHack §8- §aDeine UUID ist nun§8: §e" + newUUID);
+            player.sendMessage(Data.PREFIX + "Deine UUID ist nun§8: §e" + newUUID);
 
         } else {
-            player.sendMessage("§cSyntax: §e/setUUID [UUID]");
+            player.sendMessage(Data.USAGE + "/setUUID [UUID]");
         }
     }
 }
