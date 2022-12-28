@@ -1,2 +1,2 @@
 # BungeeHack
-Adds a setUUID-Command which changes the UUID of a player to hack bungeecord servers
+A bungeecord plugin which is used to hack unsecured bungeecord servers where the ports are not protected.
